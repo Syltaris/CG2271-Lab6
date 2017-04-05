@@ -1,0 +1,1 @@
+mainlo.o: ../mainlo.cpp
