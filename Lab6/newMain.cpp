@@ -19,7 +19,7 @@
 #define DESIREDSPD_OFFSET 10
 #define DISTANCE_OFFSET 100
 
-#define STACK_SIZE 100
+#define STACK_SIZE 80
 
 typedef void (*funcptr)(void);
 funcptr funcToExecute;
@@ -32,6 +32,8 @@ uint8_t distanceReading = 0;
 
 volatile unsigned long incSpdISROldMillis = 0;
 volatile unsigned long decSpdISROldMillis = 0;
+
+volatile TickType_t oldTicks = 0;
 
 SemaphoreHandle_t speedSemaphore = NULL;
 
@@ -59,11 +61,13 @@ void blinkRED() {
 }
 
 //drive the piezo and motor
-void motorDriver() {
-	analogWrite(PIEZO_PIN, 25 * speedLevel);
-//	vTaskDelay(10 * (3-speedLevel));
-//	analogWrite(PIEZO_PIN, 0);
-//	vTaskDelay(10 * (3-speedLevel));
+void motorDriver(void* p) {
+	while(1) {
+		analogWrite(PIEZO_PIN, 25 * (1+speedLevel));
+		vTaskDelay(10 * (4-speedLevel));
+		analogWrite(PIEZO_PIN, 0);
+		vTaskDelay(10 * (4-speedLevel));
+	}
 }
 
 //checks if desiredSpeed > distance, if so, ensure curr speed limit  (???? s)
@@ -79,9 +83,9 @@ void speedAndDistanceCheck() {
 	//set corresponding yellow LEDs
 	xQueueSendToBack(functionQueue, &funcToExecute, portMAX_DELAY);
 
-	//set motor later
-	funcToExecute = motorDriver;
-	xQueueSendToBack(functionQueue, &funcToExecute, portMAX_DELAY);
+//	//set motor later
+//	funcToExecute = motorDriver;
+//	xQueueSendToBack(functionQueue, &funcToExecute, portMAX_DELAY);
 
 	//if auto braking occurred
 	if ((desiredSpeedLevel > distanceReading) && (oldSpeedLevel > distanceReading)) {
@@ -117,6 +121,10 @@ void increaseSpeed() {
 
 		xQueueSendToFrontFromISR(functionQueue, &funcToExecute,
 				&pxHigherPriorityTaskWoken);
+
+		if(pxHigherPriorityTaskWoken == pdTRUE) {
+			taskYIELD();
+		}
 	}
 }
 
@@ -128,16 +136,27 @@ void decreaseSpeed() {
 
 		xQueueSendToFrontFromISR(functionQueue, &funcToExecute,
 				&pxHigherPriorityTaskWoken);
+
+		if(pxHigherPriorityTaskWoken == pdTRUE) {
+			taskYIELD();
+		}
 	}
 }
 
 void increaseSpeedISR() {
 	unsigned long currMillis = millis();
 
-	if (currMillis > incSpdISROldMillis + 200) {
-		increaseSpeed();
+	TickType_t currTicks = xTaskGetTickCountFromISR();
 
-		incSpdISROldMillis = currMillis;
+//	if (millis() > incSpdISROldMillis + 500) {
+//		increaseSpeed();
+//
+//		incSpdISROldMillis = millis();
+//	}
+
+	if(xTaskGetTickCountFromISR() > oldTicks + 200) {
+		oldTicks = xTaskGetTickCountFromISR();
+		increaseSpeed();
 	}
 }
 
@@ -145,9 +164,8 @@ void decreaseSpeedISR() {
 	unsigned long currMillis = millis();
 
 	if (currMillis > decSpdISROldMillis + 200) {
-		decreaseSpeed();
-
 		decSpdISROldMillis = currMillis;
+		decreaseSpeed();
 	}
 }
 
@@ -188,13 +206,13 @@ void readUARTMessage(void* p) {
 		//print out received message
 		if ((xQueueReceive(messageQueue, &message, portMAX_DELAY)) == pdTRUE) {
 			int varToPrint = message / SPD_OFFSET % 10;
-			Serial.print("Speed: ");
+			Serial.print("SPD: ");
 			Serial.println(varToPrint);
 			varToPrint = message / DESIREDSPD_OFFSET % 10;
-			Serial.print("Desired Speed: ");
+			Serial.print("DES: ");
 			Serial.println(varToPrint);
 			varToPrint = message / DISTANCE_OFFSET % 10;
-			Serial.print("Distance: ");
+			Serial.print("DIS: ");
 			Serial.print(varToPrint + 1);
 			Serial.println("d");
 			Serial.println();
@@ -214,7 +232,7 @@ void setup() {
 	attachInterrupt(digitalPinToInterrupt(INT0_PIN), decreaseSpeedISR, RISING);
 
 	Serial.begin(115200);
-	Serial.println("BENIGN");
+//	Serial.println("B");
 
 	messageQueue = xQueueCreate(3, sizeof(uint16_t));
 	functionQueue = xQueueCreate(15, 8);
@@ -227,30 +245,37 @@ void setup() {
 void loop() {
 	xTaskCreate(readDistance,
 			"sample_potentiometer",
-			100,
+			STACK_SIZE,
 			NULL,
 			5,
 			NULL);
 
 	xTaskCreate(functionExecutor,
 			"function_executor",
-			200,
+			STACK_SIZE,
 			NULL,
 			4,
 			NULL);
 
 	xTaskCreate(sendUARTMessage,
 			"send_UART",
-			200,
+			STACK_SIZE*2,
 			NULL,
 			3,
 			NULL);
 
 	xTaskCreate(readUARTMessage,
 			"receive_UART",
-			200,
+			STACK_SIZE*2,
 			NULL,
 			2,
+			NULL);
+
+	xTaskCreate(motorDriver,
+			"drive_piezo_and_motor",
+			STACK_SIZE,
+			NULL,
+			1,
 			NULL);
 
 
