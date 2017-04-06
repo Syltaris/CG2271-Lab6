@@ -136,10 +136,6 @@ c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\
                               ./arduino/WString.o (__utoa)
 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(utoa_ncheck.o)
                               c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(utoa.o) (__utoa_ncheck)
-c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(sprintf.o)
-                              ./newMain.o (sprintf)
-c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(vfprintf_std.o)
-                              c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(sprintf.o) (vfprintf)
 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(dtoa_prf.o)
                               c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(dtostrf.o) (dtoa_prf)
 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(strtod.o)
@@ -150,16 +146,8 @@ c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\
                               c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(isspace.o) (__ctype_isfalse)
 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(strncasecmp_P.o)
                               c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(strtod.o) (strncasecmp_P)
-c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(strnlen_P.o)
-                              c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(vfprintf_std.o) (strnlen_P)
-c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(strnlen.o)
-                              c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(vfprintf_std.o) (strnlen)
 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(strrev.o)
                               c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(ultoa_ncheck.o) (strrev)
-c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(fputc.o)
-                              c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(vfprintf_std.o) (fputc)
-c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(ultoa_invert.o)
-                              c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(vfprintf_std.o) (__ultoa_invert)
 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(errno.o)
                               c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(strtod.o) (errno)
 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_mulshisi3.o)
@@ -228,8 +216,6 @@ Discarded input sections
                 0x00000000       0x46 ./arduino/Print.o
  .text._ZN5Print5printERK6String
                 0x00000000       0x1c ./arduino/Print.o
- .text._ZN5Print5printEPKc
-                0x00000000        0x4 ./arduino/Print.o
  .text._ZN5Print5printERK9Printable
                 0x00000000       0x14 ./arduino/Print.o
  .text._ZN5Print7printlnEPK19__FlashStringHelper
@@ -240,12 +226,6 @@ Discarded input sections
                 0x00000000       0x24 ./arduino/Print.o
  .text._ZN5Print7printlnERK9Printable
                 0x00000000       0x24 ./arduino/Print.o
- .text._ZN5Print5printEli
-                0x00000000       0x94 ./arduino/Print.o
- .text._ZN5Print5printEii
-                0x00000000       0x10 ./arduino/Print.o
- .text._ZN5Print7printlnEii
-                0x00000000       0x30 ./arduino/Print.o
  .text._ZN5Print7printlnEli
                 0x00000000       0x24 ./arduino/Print.o
  .text._ZN5Print7printlnEhi
@@ -550,8 +530,8 @@ Discarded input sections
  .text.shiftIn  0x00000000       0x6a ./arduino/wiring_shift.o
  .text.shiftOut
                 0x00000000       0x7e ./arduino/wiring_shift.o
- .text          0x00000000        0x0 ./mainlo.o
- .bss           0x00000000        0x0 ./mainlo.o
+ .text          0x00000000        0x0 ./main.o
+ .bss           0x00000000        0x0 ./main.o
  .text          0x00000000        0x0 ./newMain.o
  .bss           0x00000000        0x0 ./newMain.o
  .text          0x00000000        0x0 C:/freeRTOS/Release/libfreeRTOS.a(queue.o)
@@ -594,6 +574,8 @@ Discarded input sections
                 0x00000000       0x12 C:/freeRTOS/Release/libfreeRTOS.a(tasks.o)
  .text.uxTaskGetNumberOfTasks
                 0x00000000        0x6 C:/freeRTOS/Release/libfreeRTOS.a(tasks.o)
+ .text.vTaskDelay
+                0x00000000       0x84 C:/freeRTOS/Release/libfreeRTOS.a(tasks.o)
  .text.vTaskPlaceOnUnorderedEventList
                 0x00000000       0x68 C:/freeRTOS/Release/libfreeRTOS.a(tasks.o)
  .text.xTaskRemoveFromUnorderedEventList
@@ -1004,10 +986,6 @@ Discarded input sections
  .bss           0x00000000        0x0 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(utoa_ncheck.o)
  .text.avr-libc
                 0x00000000       0x34 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(utoa_ncheck.o)
- .text          0x00000000        0x0 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(sprintf.o)
- .bss           0x00000000        0x0 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(sprintf.o)
- .text          0x00000000        0x0 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(vfprintf_std.o)
- .bss           0x00000000        0x0 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(vfprintf_std.o)
  .text          0x00000000        0x0 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(dtoa_prf.o)
  .bss           0x00000000        0x0 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(dtoa_prf.o)
  .text.avr-libc
@@ -1030,18 +1008,10 @@ Discarded input sections
  .bss           0x00000000        0x0 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(strncasecmp_P.o)
  .text.avr-libc
                 0x00000000       0x30 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(strncasecmp_P.o)
- .text          0x00000000        0x0 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(strnlen_P.o)
- .bss           0x00000000        0x0 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(strnlen_P.o)
- .text          0x00000000        0x0 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(strnlen.o)
- .bss           0x00000000        0x0 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(strnlen.o)
  .text          0x00000000        0x0 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(strrev.o)
  .bss           0x00000000        0x0 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(strrev.o)
  .text.avr-libc
                 0x00000000       0x20 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(strrev.o)
- .text          0x00000000        0x0 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(fputc.o)
- .bss           0x00000000        0x0 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(fputc.o)
- .text          0x00000000        0x0 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(ultoa_invert.o)
- .bss           0x00000000        0x0 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(ultoa_invert.o)
  .text          0x00000000        0x0 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(errno.o)
  .bss           0x00000000        0x0 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(errno.o)
  COMMON         0x00000000        0x2 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(errno.o)
@@ -1067,6 +1037,8 @@ Discarded input sections
  .text.libgcc.div
                 0x00000000        0x0 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_prologue.o)
  .text.libgcc   0x00000000        0x0 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_prologue.o)
+ .text.libgcc.prologue
+                0x00000000       0x38 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_prologue.o)
  .text.libgcc.builtins
                 0x00000000        0x0 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_prologue.o)
  .text.libgcc.fmul
@@ -1080,6 +1052,8 @@ Discarded input sections
  .text.libgcc.div
                 0x00000000        0x0 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_epilogue.o)
  .text.libgcc   0x00000000        0x0 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_epilogue.o)
+ .text.libgcc.prologue
+                0x00000000       0x36 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_epilogue.o)
  .text.libgcc.builtins
                 0x00000000        0x0 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_epilogue.o)
  .text.libgcc.fmul
@@ -1126,7 +1100,7 @@ LOAD ./arduino/wiring_analog.o
 LOAD ./arduino/wiring_digital.o
 LOAD ./arduino/wiring_pulse.o
 LOAD ./arduino/wiring_shift.o
-LOAD ./mainlo.o
+LOAD ./main.o
 LOAD ./newMain.o
 LOAD C:/freeRTOS/Release/libfreeRTOS.a
 LOAD c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a
@@ -1227,7 +1201,7 @@ END GROUP
 .rela.plt
  *(.rela.plt)
 
-.text           0x00000000     0x2dac
+.text           0x00000000     0x27b6
  *(.vectors)
  .vectors       0x00000000       0x68 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/crtm328p.o
                 0x00000000                __vector_default
@@ -1373,261 +1347,249 @@ END GROUP
  .text._ZN5Print5writeEPKc
                 0x000005b4       0x2c ./arduino/Print.o
                 0x000005b4                _ZN5Print5writeEPKc
+ .text._ZN5Print5printEPKc
+                0x000005e0        0x2 ./arduino/Print.o
+                0x000005e0                _ZN5Print5printEPKc
  .text._ZN5Print5printEc
-                0x000005e0        0xe ./arduino/Print.o
-                0x000005e0                _ZN5Print5printEc
+                0x000005e2        0xe ./arduino/Print.o
+                0x000005e2                _ZN5Print5printEc
  .text._ZN5Print7printlnEv
-                0x000005ee        0x6 ./arduino/Print.o
-                0x000005ee                _ZN5Print7printlnEv
+                0x000005f0        0x6 ./arduino/Print.o
+                0x000005f0                _ZN5Print7printlnEv
  .text._ZN5Print7printlnEPKc
-                0x000005f4       0x20 ./arduino/Print.o
-                0x000005f4                _ZN5Print7printlnEPKc
+                0x000005f6       0x20 ./arduino/Print.o
+                0x000005f6                _ZN5Print7printlnEPKc
  .text._ZN5Print11printNumberEmh
-                0x00000614       0xb0 ./arduino/Print.o
-                0x00000614                _ZN5Print11printNumberEmh
+                0x00000616       0xb0 ./arduino/Print.o
+                0x00000616                _ZN5Print11printNumberEmh
+ .text._ZN5Print5printEli
+                0x000006c6       0x8e ./arduino/Print.o
+                0x000006c6                _ZN5Print5printEli
+ .text._ZN5Print5printEii
+                0x00000754        0xe ./arduino/Print.o
+                0x00000754                _ZN5Print5printEii
+ .text._ZN5Print7printlnEii
+                0x00000762       0x2c ./arduino/Print.o
+                0x00000762                _ZN5Print7printlnEii
  .text._ZN5Print5printEmi
-                0x000006c4       0x18 ./arduino/Print.o
-                0x000006c4                _ZN5Print5printEmi
+                0x0000078e       0x18 ./arduino/Print.o
+                0x0000078e                _ZN5Print5printEmi
  .text._ZN5Print5printEhi
-                0x000006dc        0xc ./arduino/Print.o
-                0x000006dc                _ZN5Print5printEhi
+                0x000007a6        0xc ./arduino/Print.o
+                0x000007a6                _ZN5Print5printEhi
  .text._Z12disableTimerh
-                0x000006e8       0x40 ./arduino/Tone.o
-                0x000006e8                _Z12disableTimerh
+                0x000007b2       0x40 ./arduino/Tone.o
+                0x000007b2                _Z12disableTimerh
  .text._Z6noToneh
-                0x00000728       0x26 ./arduino/Tone.o
-                0x00000728                _Z6noToneh
+                0x000007f2       0x26 ./arduino/Tone.o
+                0x000007f2                _Z6noToneh
  .text.__vector_7
-                0x0000074e       0xb6 ./arduino/Tone.o
-                0x0000074e                __vector_7
- .text.nothing  0x00000804        0x2 ./arduino/WInterrupts.o
+                0x00000818       0xb6 ./arduino/Tone.o
+                0x00000818                __vector_7
+ .text.nothing  0x000008ce        0x2 ./arduino/WInterrupts.o
  .text.attachInterrupt
-                0x00000806       0x40 ./arduino/WInterrupts.o
-                0x00000806                attachInterrupt
+                0x000008d0       0x40 ./arduino/WInterrupts.o
+                0x000008d0                attachInterrupt
  .text.__vector_1
-                0x00000846       0x4e ./arduino/WInterrupts.o
-                0x00000846                __vector_1
+                0x00000910       0x4e ./arduino/WInterrupts.o
+                0x00000910                __vector_1
  .text.__vector_2
-                0x00000894       0x4e ./arduino/WInterrupts.o
-                0x00000894                __vector_2
+                0x0000095e       0x4e ./arduino/WInterrupts.o
+                0x0000095e                __vector_2
  .text.initVariant
-                0x000008e2        0x2 ./arduino/main.o
-                0x000008e2                initVariant
+                0x000009ac        0x2 ./arduino/main.o
+                0x000009ac                initVariant
  .text.startup.main
-                0x000008e4       0x14 ./arduino/main.o
-                0x000008e4                main
+                0x000009ae       0x14 ./arduino/main.o
+                0x000009ae                main
  .text.__vector_16
-                0x000008f8       0x94 ./arduino/wiring.o
-                0x000008f8                __vector_16
- .text.millis   0x0000098c       0x18 ./arduino/wiring.o
-                0x0000098c                millis
- .text.init     0x000009a4       0x76 ./arduino/wiring.o
-                0x000009a4                init
+                0x000009c2       0x94 ./arduino/wiring.o
+                0x000009c2                __vector_16
+ .text.millis   0x00000a56       0x18 ./arduino/wiring.o
+                0x00000a56                millis
+ .text.init     0x00000a6e       0x76 ./arduino/wiring.o
+                0x00000a6e                init
  .text.analogRead
-                0x00000a1a       0x3a ./arduino/wiring_analog.o
-                0x00000a1a                analogRead
+                0x00000ae4       0x3a ./arduino/wiring_analog.o
+                0x00000ae4                analogRead
  .text.analogWrite
-                0x00000a54       0xba ./arduino/wiring_analog.o
-                0x00000a54                analogWrite
+                0x00000b1e       0xba ./arduino/wiring_analog.o
+                0x00000b1e                analogWrite
  .text.turnOffPWM
-                0x00000b0e       0x52 ./arduino/wiring_digital.o
- .text.pinMode  0x00000b60       0x72 ./arduino/wiring_digital.o
-                0x00000b60                pinMode
+                0x00000bd8       0x52 ./arduino/wiring_digital.o
+ .text.pinMode  0x00000c2a       0x72 ./arduino/wiring_digital.o
+                0x00000c2a                pinMode
  .text.digitalWrite
-                0x00000bd2       0x6a ./arduino/wiring_digital.o
-                0x00000bd2                digitalWrite
- .text._Z8blinkREDPv
-                0x00000c3c       0x4e ./newMain.o
-                0x00000c3c                _Z8blinkREDPv
- .text._Z11motorDriverPv
-                0x00000c8a       0x78 ./newMain.o
-                0x00000c8a                _Z11motorDriverPv
- .text._Z15sendUARTMessagePv
-                0x00000d02       0xa2 ./newMain.o
-                0x00000d02                _Z15sendUARTMessagePv
- .text._Z12readDistancePv
-                0x00000da4       0x54 ./newMain.o
-                0x00000da4                _Z12readDistancePv
- .text._Z15readUARTMessagePv
-                0x00000df8       0x98 ./newMain.o
-                0x00000df8                _Z15readUARTMessagePv
- .text._Z13increaseSpeedv
-                0x00000e90       0x38 ./newMain.o
-                0x00000e90                _Z13increaseSpeedv
- .text._Z16increaseSpeedISRv
-                0x00000ec8       0x72 ./newMain.o
-                0x00000ec8                _Z16increaseSpeedISRv
- .text._Z13decreaseSpeedv
-                0x00000f3a       0x38 ./newMain.o
-                0x00000f3a                _Z13decreaseSpeedv
- .text._Z16decreaseSpeedISRv
-                0x00000f72       0x72 ./newMain.o
-                0x00000f72                _Z16decreaseSpeedISRv
+                0x00000c9c       0x6a ./arduino/wiring_digital.o
+                0x00000c9c                digitalWrite
  .text._Z7setLEDsv
-                0x00000fe4       0x56 ./newMain.o
-                0x00000fe4                _Z7setLEDsv
- .text._Z21speedAndDistanceCheckPv
-                0x0000103a       0xb6 ./newMain.o
-                0x0000103a                _Z21speedAndDistanceCheckPv
- .text.setup    0x000010f0       0xa4 ./newMain.o
-                0x000010f0                setup
- .text.loop     0x00001194       0xa2 ./newMain.o
-                0x00001194                loop
+                0x00000d06       0x30 ./newMain.o
+                0x00000d06                _Z7setLEDsv
+ .text._Z8blinkREDv
+                0x00000d36       0x46 ./newMain.o
+                0x00000d36                _Z8blinkREDv
+ .text._Z11motorDriverv
+                0x00000d7c       0x10 ./newMain.o
+                0x00000d7c                _Z11motorDriverv
+ .text._Z15sendUARTMessagePv
+                0x00000d8c       0x64 ./newMain.o
+                0x00000d8c                _Z15sendUARTMessagePv
+ .text._Z12readDistancePv
+                0x00000df0       0x5a ./newMain.o
+                0x00000df0                _Z12readDistancePv
+ .text._Z16functionExecutorPv
+                0x00000e4a       0x2e ./newMain.o
+                0x00000e4a                _Z16functionExecutorPv
+ .text._Z15readUARTMessagePv
+                0x00000e78       0xda ./newMain.o
+                0x00000e78                _Z15readUARTMessagePv
+ .text._Z21speedAndDistanceCheckv
+                0x00000f52       0x94 ./newMain.o
+                0x00000f52                _Z21speedAndDistanceCheckv
+ .text._Z13increaseSpeedv
+                0x00000fe6       0x34 ./newMain.o
+                0x00000fe6                _Z13increaseSpeedv
+ .text._Z16increaseSpeedISRv
+                0x0000101a       0x72 ./newMain.o
+                0x0000101a                _Z16increaseSpeedISRv
+ .text._Z13decreaseSpeedv
+                0x0000108c       0x34 ./newMain.o
+                0x0000108c                _Z13decreaseSpeedv
+ .text._Z16decreaseSpeedISRv
+                0x000010c0       0x72 ./newMain.o
+                0x000010c0                _Z16decreaseSpeedISRv
+ .text.setup    0x00001132       0x8e ./newMain.o
+                0x00001132                setup
+ .text.loop     0x000011c0       0x7a ./newMain.o
+                0x000011c0                loop
  .text.prvCopyDataToQueue
-                0x00001236       0xaa C:/freeRTOS/Release/libfreeRTOS.a(queue.o)
+                0x0000123a       0xaa C:/freeRTOS/Release/libfreeRTOS.a(queue.o)
  .text.prvCopyDataFromQueue
-                0x000012e0       0x34 C:/freeRTOS/Release/libfreeRTOS.a(queue.o)
+                0x000012e4       0x34 C:/freeRTOS/Release/libfreeRTOS.a(queue.o)
  .text.prvUnlockQueue
-                0x00001314       0x74 C:/freeRTOS/Release/libfreeRTOS.a(queue.o)
+                0x00001318       0x74 C:/freeRTOS/Release/libfreeRTOS.a(queue.o)
  .text.xQueueGenericReset
-                0x00001388       0x72 C:/freeRTOS/Release/libfreeRTOS.a(queue.o)
-                0x00001388                xQueueGenericReset
+                0x0000138c       0x72 C:/freeRTOS/Release/libfreeRTOS.a(queue.o)
+                0x0000138c                xQueueGenericReset
  .text.xQueueGenericCreate
-                0x000013fa       0x66 C:/freeRTOS/Release/libfreeRTOS.a(queue.o)
-                0x000013fa                xQueueGenericCreate
+                0x000013fe       0x66 C:/freeRTOS/Release/libfreeRTOS.a(queue.o)
+                0x000013fe                xQueueGenericCreate
  .text.xQueueGenericSend
-                0x00001460      0x130 C:/freeRTOS/Release/libfreeRTOS.a(queue.o)
-                0x00001460                xQueueGenericSend
+                0x00001464      0x12e C:/freeRTOS/Release/libfreeRTOS.a(queue.o)
+                0x00001464                xQueueGenericSend
  .text.xQueueGenericSendFromISR
-                0x00001590       0x58 C:/freeRTOS/Release/libfreeRTOS.a(queue.o)
-                0x00001590                xQueueGenericSendFromISR
+                0x00001592       0x58 C:/freeRTOS/Release/libfreeRTOS.a(queue.o)
+                0x00001592                xQueueGenericSendFromISR
  .text.xQueueGenericReceive
-                0x000015e8      0x16e C:/freeRTOS/Release/libfreeRTOS.a(queue.o)
-                0x000015e8                xQueueGenericReceive
+                0x000015ea      0x16e C:/freeRTOS/Release/libfreeRTOS.a(queue.o)
+                0x000015ea                xQueueGenericReceive
  .text.prvResetNextTaskUnblockTime
-                0x00001756       0x44 C:/freeRTOS/Release/libfreeRTOS.a(tasks.o)
+                0x00001758       0x44 C:/freeRTOS/Release/libfreeRTOS.a(tasks.o)
  .text.prvAddCurrentTaskToDelayedList
-                0x0000179a       0x96 C:/freeRTOS/Release/libfreeRTOS.a(tasks.o)
+                0x0000179c       0x96 C:/freeRTOS/Release/libfreeRTOS.a(tasks.o)
  .text.xTaskGenericCreate
-                0x00001830      0x1ea C:/freeRTOS/Release/libfreeRTOS.a(tasks.o)
-                0x00001830                xTaskGenericCreate
+                0x00001832      0x1ea C:/freeRTOS/Release/libfreeRTOS.a(tasks.o)
+                0x00001832                xTaskGenericCreate
  .text.vTaskStartScheduler
-                0x00001a1a       0x80 C:/freeRTOS/Release/libfreeRTOS.a(tasks.o)
-                0x00001a1a                vTaskStartScheduler
+                0x00001a1c       0x80 C:/freeRTOS/Release/libfreeRTOS.a(tasks.o)
+                0x00001a1c                vTaskStartScheduler
  .text.vTaskSuspendAll
-                0x00001a9a        0xc C:/freeRTOS/Release/libfreeRTOS.a(tasks.o)
-                0x00001a9a                vTaskSuspendAll
+                0x00001a9c        0xc C:/freeRTOS/Release/libfreeRTOS.a(tasks.o)
+                0x00001a9c                vTaskSuspendAll
  .text.xTaskGetTickCount
-                0x00001aa6       0x1c C:/freeRTOS/Release/libfreeRTOS.a(tasks.o)
-                0x00001aa6                xTaskGetTickCount
+                0x00001aa8       0x1c C:/freeRTOS/Release/libfreeRTOS.a(tasks.o)
+                0x00001aa8                xTaskGetTickCount
  .text.xTaskIncrementTick
-                0x00001ac2      0x194 C:/freeRTOS/Release/libfreeRTOS.a(tasks.o)
-                0x00001ac2                xTaskIncrementTick
+                0x00001ac4      0x194 C:/freeRTOS/Release/libfreeRTOS.a(tasks.o)
+                0x00001ac4                xTaskIncrementTick
  .text.xTaskResumeAll
-                0x00001c56       0xd6 C:/freeRTOS/Release/libfreeRTOS.a(tasks.o)
-                0x00001c56                xTaskResumeAll
+                0x00001c58       0xd6 C:/freeRTOS/Release/libfreeRTOS.a(tasks.o)
+                0x00001c58                xTaskResumeAll
  .text.vTaskDelayUntil
-                0x00001d2c       0xd8 C:/freeRTOS/Release/libfreeRTOS.a(tasks.o)
-                0x00001d2c                vTaskDelayUntil
- .text.vTaskDelay
-                0x00001e04       0x7a C:/freeRTOS/Release/libfreeRTOS.a(tasks.o)
-                0x00001e04                vTaskDelay
+                0x00001d2e       0xd8 C:/freeRTOS/Release/libfreeRTOS.a(tasks.o)
+                0x00001d2e                vTaskDelayUntil
  .text.prvIdleTask
-                0x00001e7e       0x5c C:/freeRTOS/Release/libfreeRTOS.a(tasks.o)
+                0x00001e06       0x5c C:/freeRTOS/Release/libfreeRTOS.a(tasks.o)
  .text.vTaskSwitchContext
-                0x00001eda       0x80 C:/freeRTOS/Release/libfreeRTOS.a(tasks.o)
-                0x00001eda                vTaskSwitchContext
+                0x00001e62       0x80 C:/freeRTOS/Release/libfreeRTOS.a(tasks.o)
+                0x00001e62                vTaskSwitchContext
  .text.vTaskPlaceOnEventList
-                0x00001f5a       0x48 C:/freeRTOS/Release/libfreeRTOS.a(tasks.o)
-                0x00001f5a                vTaskPlaceOnEventList
+                0x00001ee2       0x48 C:/freeRTOS/Release/libfreeRTOS.a(tasks.o)
+                0x00001ee2                vTaskPlaceOnEventList
  .text.xTaskRemoveFromEventList
-                0x00001fa2       0x7a C:/freeRTOS/Release/libfreeRTOS.a(tasks.o)
-                0x00001fa2                xTaskRemoveFromEventList
+                0x00001f2a       0x7a C:/freeRTOS/Release/libfreeRTOS.a(tasks.o)
+                0x00001f2a                xTaskRemoveFromEventList
  .text.vTaskSetTimeOutState
-                0x0000201c       0x22 C:/freeRTOS/Release/libfreeRTOS.a(tasks.o)
-                0x0000201c                vTaskSetTimeOutState
+                0x00001fa4       0x22 C:/freeRTOS/Release/libfreeRTOS.a(tasks.o)
+                0x00001fa4                vTaskSetTimeOutState
  .text.xTaskCheckForTimeOut
-                0x0000203e       0xaa C:/freeRTOS/Release/libfreeRTOS.a(tasks.o)
-                0x0000203e                xTaskCheckForTimeOut
+                0x00001fc6       0xaa C:/freeRTOS/Release/libfreeRTOS.a(tasks.o)
+                0x00001fc6                xTaskCheckForTimeOut
  .text.vTaskMissedYield
-                0x000020e8        0x8 C:/freeRTOS/Release/libfreeRTOS.a(tasks.o)
-                0x000020e8                vTaskMissedYield
+                0x00002070        0x8 C:/freeRTOS/Release/libfreeRTOS.a(tasks.o)
+                0x00002070                vTaskMissedYield
  .text.vTaskPriorityInherit
-                0x000020f0       0xb6 C:/freeRTOS/Release/libfreeRTOS.a(tasks.o)
-                0x000020f0                vTaskPriorityInherit
+                0x00002078       0xb6 C:/freeRTOS/Release/libfreeRTOS.a(tasks.o)
+                0x00002078                vTaskPriorityInherit
  .text.xTaskPriorityDisinherit
-                0x000021a6       0x72 C:/freeRTOS/Release/libfreeRTOS.a(tasks.o)
-                0x000021a6                xTaskPriorityDisinherit
+                0x0000212e       0x72 C:/freeRTOS/Release/libfreeRTOS.a(tasks.o)
+                0x0000212e                xTaskPriorityDisinherit
  .text.pvTaskIncrementMutexHeldCount
-                0x00002218       0x24 C:/freeRTOS/Release/libfreeRTOS.a(tasks.o)
-                0x00002218                pvTaskIncrementMutexHeldCount
+                0x000021a0       0x24 C:/freeRTOS/Release/libfreeRTOS.a(tasks.o)
+                0x000021a0                pvTaskIncrementMutexHeldCount
  .text.pvPortMalloc
-                0x0000223c      0x120 C:/freeRTOS/Release/libfreeRTOS.a(heap_2.o)
-                0x0000223c                pvPortMalloc
+                0x000021c4      0x120 C:/freeRTOS/Release/libfreeRTOS.a(heap_2.o)
+                0x000021c4                pvPortMalloc
  .text.vPortFree
-                0x0000235c       0x54 C:/freeRTOS/Release/libfreeRTOS.a(heap_2.o)
-                0x0000235c                vPortFree
+                0x000022e4       0x54 C:/freeRTOS/Release/libfreeRTOS.a(heap_2.o)
+                0x000022e4                vPortFree
  .text.pxPortInitialiseStack
-                0x000023b0       0xd8 C:/freeRTOS/Release/libfreeRTOS.a(port.o)
-                0x000023b0                pxPortInitialiseStack
+                0x00002338       0xd8 C:/freeRTOS/Release/libfreeRTOS.a(port.o)
+                0x00002338                pxPortInitialiseStack
  .text.xPortStartScheduler
-                0x00002488       0x76 C:/freeRTOS/Release/libfreeRTOS.a(port.o)
-                0x00002488                xPortStartScheduler
+                0x00002410       0x76 C:/freeRTOS/Release/libfreeRTOS.a(port.o)
+                0x00002410                xPortStartScheduler
  .text.vPortYield
-                0x000024fe       0xb0 C:/freeRTOS/Release/libfreeRTOS.a(port.o)
-                0x000024fe                vPortYield
+                0x00002486       0xb0 C:/freeRTOS/Release/libfreeRTOS.a(port.o)
+                0x00002486                vPortYield
  .text.vPortYieldFromTick
-                0x000025ae       0xb4 C:/freeRTOS/Release/libfreeRTOS.a(port.o)
-                0x000025ae                vPortYieldFromTick
+                0x00002536       0xb4 C:/freeRTOS/Release/libfreeRTOS.a(port.o)
+                0x00002536                vPortYieldFromTick
  .text.__vector_11
-                0x00002662        0x4 C:/freeRTOS/Release/libfreeRTOS.a(port.o)
-                0x00002662                __vector_11
+                0x000025ea        0x4 C:/freeRTOS/Release/libfreeRTOS.a(port.o)
+                0x000025ea                __vector_11
  .text.vListInitialise
-                0x00002666       0x22 C:/freeRTOS/Release/libfreeRTOS.a(list.o)
-                0x00002666                vListInitialise
+                0x000025ee       0x22 C:/freeRTOS/Release/libfreeRTOS.a(list.o)
+                0x000025ee                vListInitialise
  .text.vListInitialiseItem
-                0x00002688        0x8 C:/freeRTOS/Release/libfreeRTOS.a(list.o)
-                0x00002688                vListInitialiseItem
+                0x00002610        0x8 C:/freeRTOS/Release/libfreeRTOS.a(list.o)
+                0x00002610                vListInitialiseItem
  .text.vListInsertEnd
-                0x00002690       0x42 C:/freeRTOS/Release/libfreeRTOS.a(list.o)
-                0x00002690                vListInsertEnd
+                0x00002618       0x42 C:/freeRTOS/Release/libfreeRTOS.a(list.o)
+                0x00002618                vListInsertEnd
  .text.vListInsert
-                0x000026d2       0x88 C:/freeRTOS/Release/libfreeRTOS.a(list.o)
-                0x000026d2                vListInsert
+                0x0000265a       0x88 C:/freeRTOS/Release/libfreeRTOS.a(list.o)
+                0x0000265a                vListInsert
  .text.uxListRemove
-                0x0000275a       0x46 C:/freeRTOS/Release/libfreeRTOS.a(list.o)
-                0x0000275a                uxListRemove
+                0x000026e2       0x46 C:/freeRTOS/Release/libfreeRTOS.a(list.o)
+                0x000026e2                uxListRemove
  .text.libgcc.div
-                0x000027a0       0x28 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_udivmodhi4.o)
-                0x000027a0                __udivmodhi4
+                0x00002728       0x28 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_udivmodhi4.o)
+                0x00002728                __udivmodhi4
  .text.libgcc.div
-                0x000027c8       0x44 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_udivmodsi4.o)
-                0x000027c8                __udivmodsi4
- .text.libgcc   0x0000280c        0xc c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_tablejump.o)
-                0x0000280c                __tablejump2__
-                0x00002810                __tablejump__
+                0x00002750       0x44 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_udivmodsi4.o)
+                0x00002750                __udivmodsi4
+ .text.libgcc   0x00002794        0xc c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_tablejump.o)
+                0x00002794                __tablejump2__
+                0x00002798                __tablejump__
  .text.avr-libc
-                0x00002818       0x12 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(memcpy.o)
-                0x00002818                memcpy
- .text.avr-libc
-                0x0000282a       0x3e c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(sprintf.o)
-                0x0000282a                sprintf
- .text.avr-libc
-                0x00002868      0x386 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(vfprintf_std.o)
-                0x00002868                vfprintf
- .text.avr-libc
-                0x00002bee       0x16 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(strnlen_P.o)
-                0x00002bee                strnlen_P
- .text.avr-libc
-                0x00002c04       0x16 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(strnlen.o)
-                0x00002c04                strnlen
- .text.avr-libc
-                0x00002c1a       0x64 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(fputc.o)
-                0x00002c1a                fputc
- .text.avr-libc
-                0x00002c7e       0xbc c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(ultoa_invert.o)
-                0x00002c7e                __ultoa_invert
- .text.libgcc.prologue
-                0x00002d3a       0x38 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_prologue.o)
-                0x00002d3a                __prologue_saves__
- .text.libgcc.prologue
-                0x00002d72       0x36 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_epilogue.o)
-                0x00002d72                __epilogue_restores__
-                0x00002da8                . = ALIGN (0x2)
+                0x000027a0       0x12 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(memcpy.o)
+                0x000027a0                memcpy
+                0x000027b2                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x00002da8        0x0 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_exit.o)
-                0x00002da8                _exit
-                0x00002da8                exit
+ .fini9         0x000027b2        0x0 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_exit.o)
+                0x000027b2                _exit
+                0x000027b2                exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -1646,11 +1608,11 @@ END GROUP
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x00002da8        0x4 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_exit.o)
+ .fini0         0x000027b2        0x4 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_exit.o)
  *(.fini0)
-                0x00002dac                _etext = .
+                0x000027b6                _etext = .
 
-.data           0x00800100       0xd2 load address 0x00002dac
+.data           0x00800100       0xa0 load address 0x000027b6
                 0x00800100                PROVIDE (__data_start, .)
  *(.data)
  .data          0x00800100        0x0 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/crtm328p.o
@@ -1678,7 +1640,7 @@ END GROUP
  .data          0x00800100        0x0 ./arduino/wiring_digital.o
  .data          0x00800100        0x0 ./arduino/wiring_pulse.o
  .data          0x00800100        0x0 ./arduino/wiring_shift.o
- .data          0x00800100        0x0 ./mainlo.o
+ .data          0x00800100        0x0 ./main.o
  .data          0x00800100        0x0 ./newMain.o
  .data          0x00800100        0x0 C:/freeRTOS/Release/libfreeRTOS.a(queue.o)
  .data          0x00800100        0x0 C:/freeRTOS/Release/libfreeRTOS.a(tasks.o)
@@ -1751,18 +1713,12 @@ END GROUP
  .data          0x0080010a        0x0 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(ultoa_ncheck.o)
  .data          0x0080010a        0x0 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(utoa.o)
  .data          0x0080010a        0x0 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(utoa_ncheck.o)
- .data          0x0080010a        0x0 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(sprintf.o)
- .data          0x0080010a        0x0 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(vfprintf_std.o)
  .data          0x0080010a        0x0 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(dtoa_prf.o)
  .data          0x0080010a        0x0 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(strtod.o)
  .data          0x0080010a        0x0 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(ftoa_engine.o)
  .data          0x0080010a        0x0 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(cty_isfalse.o)
  .data          0x0080010a        0x0 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(strncasecmp_P.o)
- .data          0x0080010a        0x0 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(strnlen_P.o)
- .data          0x0080010a        0x0 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(strnlen.o)
  .data          0x0080010a        0x0 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(strrev.o)
- .data          0x0080010a        0x0 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(fputc.o)
- .data          0x0080010a        0x0 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(ultoa_invert.o)
  .data          0x0080010a        0x0 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(errno.o)
  .data          0x0080010a        0x0 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_mulshisi3.o)
  .data          0x0080010a        0x0 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_prologue.o)
@@ -1787,130 +1743,125 @@ END GROUP
  .rodata.str1.1
                 0x00800128       0x11 ./arduino/Print.o
  .rodata.str1.1
-                0x00800139       0x93 ./newMain.o
+                0x00800139       0x62 ./newMain.o
+                                 0x6a (size before relaxing)
  .rodata.str1.1
-                0x008001cc        0x5 C:/freeRTOS/Release/libfreeRTOS.a(tasks.o)
+                0x0080019b        0x5 C:/freeRTOS/Release/libfreeRTOS.a(tasks.o)
  *(.gnu.linkonce.d*)
-                0x008001d2                . = ALIGN (0x2)
- *fill*         0x008001d1        0x1 
-                0x008001d2                _edata = .
-                0x008001d2                PROVIDE (__data_end, .)
+                0x008001a0                . = ALIGN (0x2)
+                0x008001a0                _edata = .
+                0x008001a0                PROVIDE (__data_end, .)
 
-.bss            0x008001d2      0x776
-                0x008001d2                PROVIDE (__bss_start, .)
+.bss            0x008001a0      0x75d
+                0x008001a0                PROVIDE (__bss_start, .)
  *(.bss)
  *(.bss*)
- .bss.Serial    0x008001d2       0x9d ./arduino/HardwareSerial0.o
-                0x008001d2                Serial
+ .bss.Serial    0x008001a0       0x9d ./arduino/HardwareSerial0.o
+                0x008001a0                Serial
  .bss._ZL11INADDR_NONE
-                0x0080026f        0x6 ./arduino/IPAddress.o
+                0x0080023d        0x6 ./arduino/IPAddress.o
  .bss.timer2_pin_mask
-                0x00800275        0x1 ./arduino/Tone.o
-                0x00800275                timer2_pin_mask
+                0x00800243        0x1 ./arduino/Tone.o
+                0x00800243                timer2_pin_mask
  .bss.timer2_pin_port
-                0x00800276        0x2 ./arduino/Tone.o
-                0x00800276                timer2_pin_port
+                0x00800244        0x2 ./arduino/Tone.o
+                0x00800244                timer2_pin_port
  .bss.timer2_toggle_count
-                0x00800278        0x4 ./arduino/Tone.o
-                0x00800278                timer2_toggle_count
+                0x00800246        0x4 ./arduino/Tone.o
+                0x00800246                timer2_toggle_count
  .bss.timer0_fract
-                0x0080027c        0x1 ./arduino/wiring.o
+                0x0080024a        0x1 ./arduino/wiring.o
  .bss.timer0_millis
-                0x0080027d        0x4 ./arduino/wiring.o
-                0x0080027d                timer0_millis
+                0x0080024b        0x4 ./arduino/wiring.o
+                0x0080024b                timer0_millis
  .bss.timer0_overflow_count
-                0x00800281        0x4 ./arduino/wiring.o
-                0x00800281                timer0_overflow_count
+                0x0080024f        0x4 ./arduino/wiring.o
+                0x0080024f                timer0_overflow_count
  .bss.pxHigherPriorityTaskWoken
-                0x00800285        0x1 ./newMain.o
-                0x00800285                pxHigherPriorityTaskWoken
- .bss.messageToSendPrint
-                0x00800286       0x14 ./newMain.o
-                0x00800286                messageToSendPrint
- .bss.message   0x0080029a        0x2 ./newMain.o
-                0x0080029a                message
- .bss.valueQueue
-                0x0080029c        0x2 ./newMain.o
-                0x0080029c                valueQueue
+                0x00800253        0x1 ./newMain.o
+                0x00800253                pxHigherPriorityTaskWoken
+ .bss.functionQueue
+                0x00800254        0x2 ./newMain.o
+                0x00800254                functionQueue
  .bss.messageQueue
-                0x0080029e        0x2 ./newMain.o
-                0x0080029e                messageQueue
- .bss.blinkRedSemaphore
-                0x008002a0        0x2 ./newMain.o
-                0x008002a0                blinkRedSemaphore
+                0x00800256        0x2 ./newMain.o
+                0x00800256                messageQueue
  .bss.speedSemaphore
-                0x008002a2        0x2 ./newMain.o
-                0x008002a2                speedSemaphore
+                0x00800258        0x2 ./newMain.o
+                0x00800258                speedSemaphore
  .bss.decSpdISROldMillis
-                0x008002a4        0x4 ./newMain.o
-                0x008002a4                decSpdISROldMillis
+                0x0080025a        0x4 ./newMain.o
+                0x0080025a                decSpdISROldMillis
  .bss.incSpdISROldMillis
-                0x008002a8        0x4 ./newMain.o
-                0x008002a8                incSpdISROldMillis
+                0x0080025e        0x4 ./newMain.o
+                0x0080025e                incSpdISROldMillis
  .bss.distanceReading
-                0x008002ac        0x2 ./newMain.o
-                0x008002ac                distanceReading
+                0x00800262        0x1 ./newMain.o
+                0x00800262                distanceReading
  .bss.speedLevel
-                0x008002ae        0x2 ./newMain.o
-                0x008002ae                speedLevel
+                0x00800263        0x1 ./newMain.o
+                0x00800263                speedLevel
  .bss.desiredSpeedLevel
-                0x008002b0        0x2 ./newMain.o
-                0x008002b0                desiredSpeedLevel
+                0x00800264        0x1 ./newMain.o
+                0x00800264                desiredSpeedLevel
+ .bss.funcToExecute
+                0x00800265        0x2 ./newMain.o
+                0x00800265                funcToExecute
  .bss.uxSchedulerSuspended
-                0x008002b2        0x1 C:/freeRTOS/Release/libfreeRTOS.a(tasks.o)
+                0x00800267        0x1 C:/freeRTOS/Release/libfreeRTOS.a(tasks.o)
  .bss.xNextTaskUnblockTime
-                0x008002b3        0x4 C:/freeRTOS/Release/libfreeRTOS.a(tasks.o)
+                0x00800268        0x4 C:/freeRTOS/Release/libfreeRTOS.a(tasks.o)
  .bss.uxTaskNumber
-                0x008002b7        0x1 C:/freeRTOS/Release/libfreeRTOS.a(tasks.o)
+                0x0080026c        0x1 C:/freeRTOS/Release/libfreeRTOS.a(tasks.o)
  .bss.xNumOfOverflows
-                0x008002b8        0x1 C:/freeRTOS/Release/libfreeRTOS.a(tasks.o)
+                0x0080026d        0x1 C:/freeRTOS/Release/libfreeRTOS.a(tasks.o)
  .bss.xYieldPending
-                0x008002b9        0x1 C:/freeRTOS/Release/libfreeRTOS.a(tasks.o)
+                0x0080026e        0x1 C:/freeRTOS/Release/libfreeRTOS.a(tasks.o)
  .bss.uxPendedTicks
-                0x008002ba        0x1 C:/freeRTOS/Release/libfreeRTOS.a(tasks.o)
+                0x0080026f        0x1 C:/freeRTOS/Release/libfreeRTOS.a(tasks.o)
  .bss.xSchedulerRunning
-                0x008002bb        0x1 C:/freeRTOS/Release/libfreeRTOS.a(tasks.o)
+                0x00800270        0x1 C:/freeRTOS/Release/libfreeRTOS.a(tasks.o)
  .bss.uxTopReadyPriority
-                0x008002bc        0x1 C:/freeRTOS/Release/libfreeRTOS.a(tasks.o)
+                0x00800271        0x1 C:/freeRTOS/Release/libfreeRTOS.a(tasks.o)
  .bss.xTickCount
-                0x008002bd        0x4 C:/freeRTOS/Release/libfreeRTOS.a(tasks.o)
+                0x00800272        0x4 C:/freeRTOS/Release/libfreeRTOS.a(tasks.o)
  .bss.uxCurrentNumberOfTasks
-                0x008002c1        0x1 C:/freeRTOS/Release/libfreeRTOS.a(tasks.o)
+                0x00800276        0x1 C:/freeRTOS/Release/libfreeRTOS.a(tasks.o)
  .bss.uxTasksDeleted
-                0x008002c2        0x1 C:/freeRTOS/Release/libfreeRTOS.a(tasks.o)
+                0x00800277        0x1 C:/freeRTOS/Release/libfreeRTOS.a(tasks.o)
  .bss.xTasksWaitingTermination
-                0x008002c3        0xb C:/freeRTOS/Release/libfreeRTOS.a(tasks.o)
+                0x00800278        0xb C:/freeRTOS/Release/libfreeRTOS.a(tasks.o)
  .bss.xPendingReadyList
-                0x008002ce        0xb C:/freeRTOS/Release/libfreeRTOS.a(tasks.o)
+                0x00800283        0xb C:/freeRTOS/Release/libfreeRTOS.a(tasks.o)
  .bss.pxOverflowDelayedTaskList
-                0x008002d9        0x2 C:/freeRTOS/Release/libfreeRTOS.a(tasks.o)
+                0x0080028e        0x2 C:/freeRTOS/Release/libfreeRTOS.a(tasks.o)
  .bss.pxDelayedTaskList
-                0x008002db        0x2 C:/freeRTOS/Release/libfreeRTOS.a(tasks.o)
+                0x00800290        0x2 C:/freeRTOS/Release/libfreeRTOS.a(tasks.o)
  .bss.xDelayedTaskList2
-                0x008002dd        0xb C:/freeRTOS/Release/libfreeRTOS.a(tasks.o)
+                0x00800292        0xb C:/freeRTOS/Release/libfreeRTOS.a(tasks.o)
  .bss.xDelayedTaskList1
-                0x008002e8        0xb C:/freeRTOS/Release/libfreeRTOS.a(tasks.o)
+                0x0080029d        0xb C:/freeRTOS/Release/libfreeRTOS.a(tasks.o)
  .bss.pxReadyTasksLists
-                0x008002f3       0x6e C:/freeRTOS/Release/libfreeRTOS.a(tasks.o)
+                0x008002a8       0x6e C:/freeRTOS/Release/libfreeRTOS.a(tasks.o)
  .bss.pxCurrentTCB
-                0x00800361        0x2 C:/freeRTOS/Release/libfreeRTOS.a(tasks.o)
-                0x00800361                pxCurrentTCB
+                0x00800316        0x2 C:/freeRTOS/Release/libfreeRTOS.a(tasks.o)
+                0x00800316                pxCurrentTCB
  .bss.xHeapHasBeenInitialised.1882
-                0x00800363        0x1 C:/freeRTOS/Release/libfreeRTOS.a(heap_2.o)
- .bss.xEnd      0x00800364        0x4 C:/freeRTOS/Release/libfreeRTOS.a(heap_2.o)
- .bss.xStart    0x00800368        0x4 C:/freeRTOS/Release/libfreeRTOS.a(heap_2.o)
- .bss.ucHeap    0x0080036c      0x5dc C:/freeRTOS/Release/libfreeRTOS.a(heap_2.o)
+                0x00800318        0x1 C:/freeRTOS/Release/libfreeRTOS.a(heap_2.o)
+ .bss.xEnd      0x00800319        0x4 C:/freeRTOS/Release/libfreeRTOS.a(heap_2.o)
+ .bss.xStart    0x0080031d        0x4 C:/freeRTOS/Release/libfreeRTOS.a(heap_2.o)
+ .bss.ucHeap    0x00800321      0x5dc C:/freeRTOS/Release/libfreeRTOS.a(heap_2.o)
  *(COMMON)
-                0x00800948                PROVIDE (__bss_end, .)
-                0x00002dac                __data_load_start = LOADADDR (.data)
-                0x00002e7e                __data_load_end = (__data_load_start + SIZEOF (.data))
+                0x008008fd                PROVIDE (__bss_end, .)
+                0x000027b6                __data_load_start = LOADADDR (.data)
+                0x00002856                __data_load_end = (__data_load_start + SIZEOF (.data))
 
-.noinit         0x00800948        0x0
-                0x00800948                PROVIDE (__noinit_start, .)
+.noinit         0x008008fd        0x0
+                0x008008fd                PROVIDE (__noinit_start, .)
  *(.noinit*)
-                0x00800948                PROVIDE (__noinit_end, .)
-                0x00800948                _end = .
-                0x00800948                PROVIDE (__heap_start, .)
+                0x008008fd                PROVIDE (__noinit_end, .)
+                0x008008fd                _end = .
+                0x008008fd                PROVIDE (__heap_start, .)
 
 .eeprom         0x00810000        0x0
  *(.eeprom*)
@@ -1973,7 +1924,7 @@ END GROUP
  .comment       0x00000011       0x12 ./arduino/wiring_digital.o
  .comment       0x00000011       0x12 ./arduino/wiring_pulse.o
  .comment       0x00000011       0x12 ./arduino/wiring_shift.o
- .comment       0x00000011       0x12 ./mainlo.o
+ .comment       0x00000011       0x12 ./main.o
  .comment       0x00000011       0x12 ./newMain.o
  .comment       0x00000011       0x12 C:/freeRTOS/Release/libfreeRTOS.a(queue.o)
  .comment       0x00000011       0x12 C:/freeRTOS/Release/libfreeRTOS.a(tasks.o)
@@ -1984,11 +1935,8 @@ END GROUP
  .comment       0x00000011       0x12 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(malloc.o)
  .comment       0x00000011       0x12 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(random.o)
  .comment       0x00000011       0x12 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(realloc.o)
- .comment       0x00000011       0x12 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(sprintf.o)
- .comment       0x00000011       0x12 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(vfprintf_std.o)
  .comment       0x00000011       0x12 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(dtoa_prf.o)
  .comment       0x00000011       0x12 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(strtod.o)
- .comment       0x00000011       0x12 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(fputc.o)
  .comment       0x00000011       0x12 c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(errno.o)
 
 .note.gnu.build-id
@@ -2062,7 +2010,7 @@ Symbol                                            File
 Serial                                            ./arduino/HardwareSerial0.o
                                                   ./newMain.o
 _Z10randomSeedm                                   ./arduino/WMath.o
-_Z11motorDriverPv                                 ./newMain.o
+_Z11motorDriverv                                  ./newMain.o
 _Z11serialEventv                                  ./arduino/HardwareSerial.o
 _Z12disableTimerh                                 ./arduino/Tone.o
 _Z12readDistancePv                                ./newMain.o
@@ -2073,17 +2021,18 @@ _Z14serialEventRunv                               ./arduino/HardwareSerial.o
 _Z15readUARTMessagePv                             ./newMain.o
 _Z15sendUARTMessagePv                             ./newMain.o
 _Z16decreaseSpeedISRv                             ./newMain.o
+_Z16functionExecutorPv                            ./newMain.o
 _Z16increaseSpeedISRv                             ./newMain.o
 _Z17Serial0_availablev                            ./arduino/HardwareSerial0.o
                                                   ./arduino/HardwareSerial.o
-_Z21speedAndDistanceCheckPv                       ./newMain.o
+_Z21speedAndDistanceCheckv                        ./newMain.o
 _Z3maplllll                                       ./arduino/WMath.o
 _Z4tonehjm                                        ./arduino/Tone.o
 _Z6noToneh                                        ./arduino/Tone.o
 _Z6randoml                                        ./arduino/WMath.o
 _Z6randomll                                       ./arduino/WMath.o
 _Z7setLEDsv                                       ./newMain.o
-_Z8blinkREDPv                                     ./newMain.o
+_Z8blinkREDv                                      ./newMain.o
 _Z8makeWordhh                                     ./arduino/WMath.o
 _Z8makeWordj                                      ./arduino/WMath.o
 _Z8setupUSBv                                      ./arduino/main.o
@@ -2103,6 +2052,7 @@ _ZN5Print10printFloatEdh                          ./arduino/Print.o
 _ZN5Print11printNumberEmh                         ./arduino/Print.o
 _ZN5Print5printEPK19__FlashStringHelper           ./arduino/Print.o
 _ZN5Print5printEPKc                               ./arduino/Print.o
+                                                  ./newMain.o
 _ZN5Print5printERK6String                         ./arduino/Print.o
 _ZN5Print5printERK9Printable                      ./arduino/Print.o
 _ZN5Print5printEc                                 ./arduino/Print.o
@@ -2111,6 +2061,7 @@ _ZN5Print5printEdi                                ./arduino/Print.o
 _ZN5Print5printEhi                                ./arduino/Print.o
                                                   ./arduino/IPAddress.o
 _ZN5Print5printEii                                ./arduino/Print.o
+                                                  ./newMain.o
 _ZN5Print5printEji                                ./arduino/Print.o
 _ZN5Print5printEli                                ./arduino/Print.o
 _ZN5Print5printEmi                                ./arduino/Print.o
@@ -2126,10 +2077,12 @@ _ZN5Print7printlnEc                               ./arduino/Print.o
 _ZN5Print7printlnEdi                              ./arduino/Print.o
 _ZN5Print7printlnEhi                              ./arduino/Print.o
 _ZN5Print7printlnEii                              ./arduino/Print.o
+                                                  ./newMain.o
 _ZN5Print7printlnEji                              ./arduino/Print.o
 _ZN5Print7printlnEli                              ./arduino/Print.o
 _ZN5Print7printlnEmi                              ./arduino/Print.o
 _ZN5Print7printlnEv                               ./arduino/Print.o
+                                                  ./newMain.o
 _ZN6Stream10parseFloatE13LookaheadModec           ./arduino/Stream.o
 _ZN6Stream10readStringEv                          ./arduino/Stream.o
 _ZN6Stream10setTimeoutEm                          ./arduino/Stream.o
@@ -2318,8 +2271,6 @@ __do_global_ctors                                 c:/arduino/hardware/tools/avr/
                                                   ./arduino/HardwareSerial0.o
 __epilogue_restores__                             c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_epilogue.o)
                                                   c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(strtod.o)
-                                                  c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(vfprintf_std.o)
-                                                  c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(sprintf.o)
                                                   c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(realloc.o)
 __eqsf2                                           c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libm.a(cmpsf2.o)
                                                   c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(strtod.o)
@@ -2426,8 +2377,6 @@ __nesf2                                           c:/arduino/hardware/tools/avr/
                                                   c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(strtod.o)
 __prologue_saves__                                c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_prologue.o)
                                                   c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(strtod.o)
-                                                  c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(vfprintf_std.o)
-                                                  c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(sprintf.o)
                                                   c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(realloc.o)
 __stack                                           c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/crtm328p.o
 __strlen_P                                        c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(strlen_P.o)
@@ -2448,8 +2397,6 @@ __ultoa                                           c:/arduino/hardware/tools/avr/
                                                   ./arduino/WString.o
 __ultoa_common                                    c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(ultoa_ncheck.o)
                                                   c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(ltoa_ncheck.o)
-__ultoa_invert                                    c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(ultoa_invert.o)
-                                                  c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(vfprintf_std.o)
 __ultoa_ncheck                                    c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(ultoa_ncheck.o)
                                                   c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(ultoa.o)
 __umulhisi3                                       c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_umulhisi3.o)
@@ -2513,7 +2460,6 @@ atol                                              c:/arduino/hardware/tools/avr/
                                                   ./arduino/WString.o
 attachInterrupt                                   ./arduino/WInterrupts.o
                                                   ./newMain.o
-blinkRedSemaphore                                 ./newMain.o
 countPulseASM                                     ./arduino/wiring_pulse.o
 decSpdISROldMillis                                ./newMain.o
 delay                                             ./arduino/wiring.o
@@ -2544,12 +2490,12 @@ errno                                             c:/arduino/hardware/tools/avr/
                                                   c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(strtod.o)
 exit                                              c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_exit.o)
                                                   c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/crtm328p.o
-fputc                                             c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(fputc.o)
-                                                  c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(vfprintf_std.o)
 free                                              c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(malloc.o)
                                                   c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(realloc.o)
                                                   ./arduino/new.o
                                                   ./arduino/WString.o
+funcToExecute                                     ./newMain.o
+functionQueue                                     ./newMain.o
 incSpdISROldMillis                                ./newMain.o
 init                                              ./arduino/wiring.o
                                                   ./arduino/main.o
@@ -2577,9 +2523,7 @@ memcpy                                            c:/arduino/hardware/tools/avr/
                                                   ./arduino/WString.o
 memmove                                           c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(memmove.o)
                                                   ./arduino/WString.o
-message                                           ./newMain.o
 messageQueue                                      ./newMain.o
-messageToSendPrint                                ./newMain.o
 micros                                            ./arduino/wiring.o
                                                   ./arduino/wiring_pulse.o
 millis                                            ./arduino/wiring.o
@@ -2617,8 +2561,6 @@ shiftIn                                           ./arduino/wiring_shift.o
 shiftOut                                          ./arduino/wiring_shift.o
 speedLevel                                        ./newMain.o
 speedSemaphore                                    ./newMain.o
-sprintf                                           c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(sprintf.o)
-                                                  ./newMain.o
 srandom                                           c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(random.o)
                                                   ./arduino/WMath.o
 strchr                                            c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(strchr.o)
@@ -2635,10 +2577,6 @@ strncmp                                           c:/arduino/hardware/tools/avr/
                                                   ./arduino/WString.o
 strncpy                                           c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(strncpy.o)
                                                   ./arduino/WString.o
-strnlen                                           c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(strnlen.o)
-                                                  c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(vfprintf_std.o)
-strnlen_P                                         c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(strnlen_P.o)
-                                                  c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(vfprintf_std.o)
 strrchr                                           c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(strrchr.o)
                                                   ./arduino/WString.o
 strrev                                            c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(strrev.o)
@@ -2698,7 +2636,6 @@ vPortYield                                        C:/freeRTOS/Release/libfreeRTO
 vPortYieldFromTick                                C:/freeRTOS/Release/libfreeRTOS.a(port.o)
 vQueueDelete                                      C:/freeRTOS/Release/libfreeRTOS.a(queue.o)
 vTaskDelay                                        C:/freeRTOS/Release/libfreeRTOS.a(tasks.o)
-                                                  ./newMain.o
 vTaskDelayUntil                                   C:/freeRTOS/Release/libfreeRTOS.a(tasks.o)
                                                   ./newMain.o
 vTaskDelete                                       C:/freeRTOS/Release/libfreeRTOS.a(tasks.o)
@@ -2721,13 +2658,5 @@ vTaskSuspendAll                                   C:/freeRTOS/Release/libfreeRTO
                                                   C:/freeRTOS/Release/libfreeRTOS.a(queue.o)
 vTaskSwitchContext                                C:/freeRTOS/Release/libfreeRTOS.a(tasks.o)
                                                   C:/freeRTOS/Release/libfreeRTOS.a(port.o)
-valueQueue                                        ./newMain.o
-vfprintf                                          c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(vfprintf_std.o)
-                                                  c:/arduino/hardware/tools/avr/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(sprintf.o)
 xPortGetFreeHeapSize                              C:/freeRTOS/Release/libfreeRTOS.a(heap_2.o)
-xPortStartScheduler                               C:/freeRTOS/Release/libfreeRTOS.a(port.o)
-                                                  C:/freeRTOS/Release/libfreeRTOS.a(tasks.o)
-xQueueCreateCountingSemaphore                     C:/freeRTOS/Release/libfreeRTOS.a(queue.o)
-xQueueCreateMutex                                 C:/freeRTOS/Release/libfreeRTOS.a(queue.o)
-xQueueGenericCreate                               C:/freeRTOS/Release/libfreeRTOS.a(queue.o)
-                                                 
+xPortStartScheduler     
